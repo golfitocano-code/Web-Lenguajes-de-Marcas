@@ -38,17 +38,20 @@
             padding: 30px;
         }
     </style>
-    
+
     <cabecera class="cabecera">
         <h1 id="nombre" style="color: goldenrod;">ARCAWEB</h1>
         <img id="logo" src="../img/logo1.png" alt="logo" style="width: 10%;">
     </cabecera>
     <menu>
-        <nav>
-            <button id="inicio" href="index.html">Portada</button>
-            <button id="oferta" href="oferta.html">Nuestras Ofertas</button>
-            <button id="proyecto" href="proyecto.html">Nuestros Proyectos</button>
-            <button id="contacto" href="contacto.html">Contacto</button>
+        <nav class="navegador">
+       <button id="inicio" onclick="window.location.href='index.html'">Portada</button>
+
+        <button id="oferta" onclick="window.location.href='oferta.html'">Nuestras Ofertas</button>
+
+        <button id="proyecto" onclick="window.location.href='proyecto.html'">Nuestros Proyectos</button>
+
+        <button id="contacto" onclick="window.location.href='contacto.html'">Contacto</button>
         </nav>
     </menu>
 
@@ -121,280 +124,10 @@
 
 </section>
 
-     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
-        }
-
-        /* Contenedor principal */
-        .contacto {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 30px;
-        }
-
-        /* Columnas */
-        .contacto-info,
-        .contacto-redes {
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .contacto h2 {
-            margin-top: 0;
-            margin-bottom: 25px;
-            color: #17365d;
-            font-size: 26px;
-        }
-
-        /* Datos de contacto */
-        .dato {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 22px;
-        }
-
-        .dato i {
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            background-color: #e8f0fe;
-            color: #2463a6;
-            border-radius: 50%;
-            font-size: 20px;
-        }
-
-        .dato p {
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .dato strong {
-            display: block;
-            margin-bottom: 3px;
-        }
-
-        .dato a {
-            color: #444;
-            text-decoration: none;
-        }
-
-        .dato a:hover {
-            color: #2463a6;
-        }
-
-        /* Mapa */
-        .mapa {
-            margin-top: 25px;
-        }
-
-        .mapa iframe {
-            width: 100%;
-            height: 250px;
-            border: 0;
-            border-radius: 10px;
-        }
-
-        /* Redes sociales */
-        .red-social {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #eee;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #333;
-            transition: 0.3s;
-        }
-
-        .red-social i {
-            width: 35px;
-            text-align: center;
-            font-size: 25px;
-        }
-
-        .red-social span {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .red-social:hover {
-            transform: translateX(5px);
-            background-color: #f4f6f9;
-        }
-
-        .red-social.x:hover {
-            color: #000;
-        }
-
-        .red-social.facebook:hover {
-            color: #1877f2;
-        }
-
-        .red-social.instagram:hover {
-            color: #e1306c;
-        }
-
-        .red-social i {
-            flex-shrink: 0;
-        }
-
-        .texto-redes {
-            line-height: 1.6;
-            color: #666;
-            margin-bottom: 25px;
-        }
-
-        /* Adaptación a móviles */
-        @media (max-width: 768px) {
-            .contacto {
-                grid-template-columns: 1fr;
-                margin: 20px auto;
-                padding: 15px;
-                gap: 20px;
-            }
-
-            .contacto-info,
-            .contacto-redes {
-                padding: 22px;
-            }
-        }
-    </style>
-    <body>
-
-    
-<style>
-    .contacto-footer {
-        width: 100%;
-        padding: 25px 5%;
-        background: transparent;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
-
-    .contacto-footer-contenido {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 40px;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    .contacto-footer h3 {
-        font-size: 18px;
-        margin: 0 0 15px;
-        color:burlywood;
-    }
-
-    .contacto-footer-info {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px 20px;
-    }
-
-    .contacto-footer-dato {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 13px;
-        color:burlywood;
-    }
-
-    .contacto-footer-dato i {
-        color: burlywood;
-        font-size: 17px;
-        width: 20px;
-        text-align: center;
-    }
-
-    .contacto-footer a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    .contacto-footer a:hover {
-        color: burlywood;
-    }
-
-    .contacto-footer-mapa {
-        margin-top: 15px;
-    }
-
-    .contacto-footer-mapa iframe {
-        width: 100%;
-        height: 110px;
-        border: 0;
-        border-radius: 6px;
-        display: block;
-        margin-top: 20px;
-    }
-
-    .contacto-footer-redes {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .contacto-footer-redes a {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 14px;
-        color: burlywood;
-        transition: color 0.2s;
-    }
-
-    .contacto-footer-redes i {
-        width: 22px;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .contacto-footer-redes .fa-x-twitter:hover {
-        color: #000;
-    }
-
-    .contacto-footer-redes .fa-facebook:hover {
-        color: #1877f2;
-    }
-
-    .contacto-footer-redes .fa-instagram:hover {
-        color: #e1306c;
-    }
-
-    @media (max-width: 650px) {
-        .contacto-footer-contenido {
-            grid-template-columns: 1fr;
-            gap: 25px;
-        }
-
-        .contacto-footer-info {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
+          
 
 <!-- Iconos -->
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 
 <footer class="contacto-footer">
     <div class="contacto-footer-contenido">
