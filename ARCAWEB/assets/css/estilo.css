@@ -23,3 +23,279 @@
     color:goldenrod;
 }
 
+/* Navegador */
+.navegador {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Botones */
+.navegador button {
+    flex: 1;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:darkgray;
+    color:darkgoldenrod;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efecto al pasar el ratón */
+.navegador button:hover {
+    background-color: goldenrod;
+    color: white;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+    .navegador {
+        flex-wrap: wrap;
+    }
+
+    .navegador button {
+        flex: 1 1 45%;
+    }
+}
+
+
+/*****************INDEX********************/
+
+/*CARRUSEL*/
+
+
+/* CARROUSEL INFINITO */
+.carrusel {
+    width: 100%;
+    background-color: gray;
+    padding: 40px 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Ventana del carrusel */
+.carrusel-contenedor {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Pista de imágenes */
+.carrusel-pista {
+    display: flex;
+    width: max-content;
+    gap: 30px;
+    animation: movimiento 30s linear infinite;
+}
+
+/* Imágenes */
+.carrusel-pista img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+/* Animación infinita */
+@keyframes movimiento {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pausar al pasar el ratón */
+.carrusel-pista:hover {
+    animation-play-state: paused;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 768px) {
+    .carrusel-pista img {
+        width: 220px;
+        height: 170px;
+    }
+
+    .carrusel-pista {
+        gap: 15px;
+        animation-duration: 22s;
+    }
+}
+
+/*****************OFERTA*******************/
+
+/*****************PROYECTO*****************/
+
+/*CUERPO*/
+
+
+/* Contenedor de los GIFs */
+.gifts {
+    width: 100%;
+    background-color: gray;
+    padding: 40px 5%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Imágenes GIF */
+.gifts img {
+    width: calc(50% - 20px);
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 768px) {
+    .gifts {
+        flex-direction: column;
+        padding: 25px 5%;
+        gap: 25px;
+    }
+
+    .gifts img {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+
+/******************CONTACTO****************/
+
+/*REDES SOCIALES Y FOOTER*/
+ /* Columnas */
+        .contacto-info,
+        .contacto-redes {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .contacto h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #17365d;
+            font-size: 26px;
+        }
+
+        /* Datos de contacto */
+        .dato {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .dato i {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background-color: #e8f0fe;
+            color: #2463a6;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        .dato p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .dato strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .dato a {
+            color: #444;
+            text-decoration: none;
+        }
+
+        .dato a:hover {
+            color: #2463a6;
+        }
+
+
+        /* Redes sociales */
+        .red-social {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .red-social i {
+            width: 35px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .red-social span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .red-social:hover {
+            transform: translateX(5px);
+            background-color: #f4f6f9;
+        }
+
+        .red-social.x:hover {
+            color: #000;
+        }
+
+        .red-social.facebook:hover {
+            color: #1877f2;
+        }
+
+        .red-social.instagram:hover {
+            color: #e1306c;
+        }
+
+        .red-social i {
+            flex-shrink: 0;
+        }
+
+        .texto-redes {
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Adaptación a móviles */
+        @media (max-width: 768px) {
+            .contacto {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
+                padding: 15px;
+                gap: 20px;
+            }
+
+            .contacto-info,
+            .contacto-redes {
+                padding: 22px;
+            }
+        }

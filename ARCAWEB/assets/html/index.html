@@ -10,20 +10,80 @@
     <title>Portada</title>
 </head>
 <body>
+   <!-- Aqui se utiliza el elemento style-->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Contenedor principal */
+        .contacto {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+    </style>
     <cabecera>
+      <!--Aquí utilizo css in line-->
         <h1 id="nombre" style="color: goldenrod;">ARCAWEB</h1>
         <img id="logo" src="../img/logo1.png" alt="logo" style="width: 10%;">
     </cabecera>
     <menu>
-        <nav>
-            <button id="inicio" href="index.html">Portada</button>
-            <button id="oferta" href="oferta.html">Nuestras Ofertas</button>
-            <button id="proyecto" href="proyecto.html">Nuestros Proyectos</button>
-            <button id="contacto" href="contacto.html">Contacto</button>
+        <nav class="navegador">
+            <button id="inicio" onclick="window.location.href='index.html'">Portada</button>
+
+            <button id="oferta" onclick="window.location.href='oferta.html'">Nuestras Ofertas</button>
+
+            <button id="proyecto" onclick="window.location.href='proyecto.html'">Nuestros Proyectos</button>
+
+            <button id="contacto" onclick="window.location.href='contacto.html'">Contacto</button>
         </nav>
     </menu>
-    <main>
-       <p></p> 
-    </main>
+   
+<main class="carrusel">
+
+    <div class="carrusel-contenedor">
+
+        <div class="carrusel-pista">
+
+            <!-- Primera serie de imágenes -->
+            <img src="../img/branding.jpg" alt="Imagen 1">
+            <img src="../img/caja.jpg" alt="Imagen 2">
+            <img src="../img/diseñoGrafico.jpg" alt="Imagen 3">
+            <img src="../img/diseñoWeb.jpg" alt="Imagen 4">
+            <img src="../img/marca.jpg" alt="Imagen 5">
+            <img src="../img/navarradio.png" alt="Imagen 6">
+            <img src="../img/perro.jpg" alt="Imagen 7">
+            <img src="../img/Mi.jpg" alt="Imagen 8">
+            <img src="../img/tiendaOnline.jpg" alt="Imagen 9">
+
+
+            <!-- Segunda serie: duplicada para el movimiento infinito -->
+           <img src="../img/branding.jpg" alt="Imagen 1">
+            <img src="../img/caja.jpg" alt="Imagen 2">
+            <img src="../img/diseñoGrafico.jpg" alt="Imagen 3">
+            <img src="../img/diseñoWeb.jpg" alt="Imagen 4">
+            <img src="../img/marca.jpg" alt="Imagen 5">
+            <img src="../img/navarradio.png" alt="Imagen 6">
+            <img src="../img/perro.jpg" alt="Imagen 7">
+            <img src="../img/Mi.jpg" alt="Imagen 8">
+            <img src="../img/tiendaOnline.jpg" alt="Imagen 9">
+
+
+        </div>
+
+    </div>
+
+</main>
 </body>
 </html>
