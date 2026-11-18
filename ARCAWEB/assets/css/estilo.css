@@ -9,19 +9,49 @@
 }
 
 /*LOGO*/
-.logo{
+
+/* CABECERA */
+.cabecera {
     display: flex;
-    padding-left: 10px;
-    position: fixed;
-    margin-top: 10px;
+    align-items: center;
+    width: 100%;
+    min-height: 150px;
+    background-color: gray;
 }
-/*NOMBRE WEB CABECERA*/
-.nombre{
+
+/* LOGO A LA IZQUIERDA */
+.cabecera-logo {
+    width: 300px;
     display: flex;
     flex-wrap: wrap;
-    justify-items: center;
-    color:goldenrod;
+    justify-content: left;
+    margin-right: 10px;
+    align-items: center;
 }
+
+.cabecera-logo img {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+/* NOMBRE CENTRADO EN EL RESTO DEL ANCHO */
+.cabecera-titulo {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#nombre {
+    color: goldenrod;
+    font-size: 45px;
+    margin: 0;
+    justify-content: space-around;
+    font-family: "Cookie", cursive;
+}
+
 
 /* Navegador */
 .navegador {
@@ -30,6 +60,7 @@
     gap: 8px;
     padding: 10px 0;
     box-sizing: border-box;
+    background-color: goldenrod;
 }
 
 /* Botones */
@@ -38,8 +69,9 @@
     padding: 15px 10px;
     border: none;
     border-radius: 5px;
-    background-color:darkgray;
-    color:darkgoldenrod;
+    background-color:gray;
+    color:burlywood;
+    border-color: black;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
@@ -130,6 +162,97 @@
 }
 
 /*****************OFERTA*******************/
+main.contenido > h2,
+main.contenido > p.descripcion {
+    text-align: center;
+}
+/* CONTENEDOR DE OFERTAS */
+.ofertas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* TARJETAS */
+.tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    min-height: 280px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color:gray;
+    color:blanchedalmond;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* IMÁGENES */
+.tarjeta img {
+    width: 40%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* TÍTULOS Y TEXTOS */
+.tarjeta h3 {
+    margin-top: 0;
+    font-size: 25px;
+    color: #222;
+}
+
+.tarjeta p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: burlywood;
+    text-align: justify;
+}
+
+/* PRECIOS */
+.tarjeta .precio {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+/* ALTERNAR POSICIÓN DE LAS IMÁGENES */
+
+/* Oferta 1 y 3: imagen a la izquierda */
+.tarjeta:nth-child(odd) {
+    flex-direction: row;
+}
+
+/* Oferta 2 y 4: imagen a la derecha */
+.tarjeta:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* DISEÑO RESPONSIVE PARA MÓVILES */
+@media (max-width: 768px) {
+    .tarjeta,
+    .tarjeta:nth-child(odd),
+    .tarjeta:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tarjeta img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .tarjeta p {
+        text-align: left;
+    }
+}
 
 /*****************PROYECTO*****************/
 
@@ -175,35 +298,267 @@
 
 /******************CONTACTO****************/
 
+/*FORMULARIO*/
+
+/* FORMULARIO DE CONTACTO */
+.formulario-contacto {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 40px;
+    background: gray;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    font-family: Arial, sans-serif;
+    color: burlywood;
+}
+
+/* TÍTULO */
+.formulario-contacto h2 {
+    text-align: center;
+    font-size: 30px;
+    color: burlywood;
+    margin-bottom: 15px;
+}
+
+/* DESCRIPCIÓN */
+.formulario-contacto .descripcion {
+    text-align: center;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* FILAS */
+.formulario-contacto .fila {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* GRUPOS */
+.formulario-contacto .grupo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+/* ETIQUETAS */
+.formulario-contacto label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+/* CAMPOS */
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* PLACEHOLDER */
+.formulario-contacto input::placeholder,
+.formulario-contacto textarea::placeholder {
+    color: #94a3b8;
+}
+
+/* EFECTO AL SELECCIONAR */
+.formulario-contacto input:focus,
+.formulario-contacto select:focus,
+.formulario-contacto textarea:focus {
+    border-color: #2563eb;
+    background: gray;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* TEXTAREA */
+.formulario-contacto textarea {
+    min-height: 150px;
+    resize: vertical;
+    color: burlywood;
+}
+
+/* BOTÓN */
+.formulario-contacto button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background: black;
+    color: blanchedalmond;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* HOVER DEL BOTÓN */
+.formulario-contacto button:hover {
+    background: #334155;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+/* AVISO */
+.formulario-contacto .aviso {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* RESPONSIVE PARA MÓVILES */
+@media (max-width: 600px) {
+
+    .formulario-contacto {
+        margin: 20px 15px;
+        padding: 25px 20px;
+    }
+
+    .formulario-contacto h2 {
+        font-size: 24px;
+    }
+
+    .formulario-contacto .fila {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .formulario-contacto .grupo {
+        margin-bottom: 18px;
+    }
+
+}
+
+
 /*REDES SOCIALES Y FOOTER*/
  
 
 /* FOOTER */
 .contacto-footer {
+    background-color:gray;
+    color: blanchedalmond;
+    padding: 40px 30px;
     width: 100%;
-    background-color: #222;
-    color: #fff;
-    padding: 40px 5%;
-    box-sizing: border-box;
+}
+
+/* TRES COLUMNAS */
+.contacto-footer-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* TÍTULOS */
+.contacto-footer h3 {
+    color: goldenrod;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* DATOS DE CONTACTO */
+.contacto-footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto-footer-dato {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contacto-footer-dato i {
+    color: goldenrod;
+    width: 20px;
+}
+
+.contacto-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.contacto-footer a:hover {
+    color: goldenrod;
+}
+
+/* MAPA CENTRAL */
+.contacto-footer-mapa {
+    text-align: center;
+}
+
+.contacto-footer-mapa iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* REDES SOCIALES */
+.footer-redes {
+    text-align: center;
+}
+
+.contacto-footer-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+.contacto-footer-redes a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contacto-footer-redes i {
+    font-size: 22px;
+    color: goldenrod;
+}
+
+/* COPYRIGHT CENTRADO */
+.copyright {
+    width: 100%;
+    background-color: gray;
+    color: blanchedalmond;
+    text-align: center;
+    padding: 18px 10px;
     margin: 0;
 }
 
-/* CONTENIDO DEL FOOTER */
-.contacto-footer-contenido {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+.copyright p {
+    margin: 0;
+    text-align: center;
 }
+
 
 /* TÍTULOS */
 .contacto-footer h3 {
     font-size: 22px;
     margin-bottom: 20px;
-    color: #fff;
+    color: blanchedalmond;
 }
 
 /* DATOS DE CONTACTO */
@@ -226,7 +581,7 @@
 }
 
 .contacto-footer a {
-    color: #fff;
+    color: blanchedalmond;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -284,36 +639,48 @@ html, body {
 }
 
 
-/* TABLETS Y MÓVILES */
+
 @media (max-width: 768px) {
+
+    /* CABECERA */
+    .cabecera {
+        min-height: 110px;
+    }
+
+    .cabecera-logo {
+        width: 100px;
+    }
+
+    .cabecera-logo img {
+        width: 75px;
+    }
+
+    #nombre {
+        font-size: 30px;
+    }
+
+    /* FOOTER */
     .contacto-footer-contenido {
         grid-template-columns: 1fr;
+        text-align: center;
         gap: 35px;
     }
 
-    .contacto-footer {
-        padding: 35px 20px;
+    .contacto-footer-info {
+        align-items: center;
     }
 
-    .contacto-footer-mapa {
-        max-width: 100%;
+    .contacto-footer-dato {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .contacto-footer-mapa iframe {
-        height: 220px;
+        max-width: 450px;
     }
-}
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: gray;
-}
-
-.contacto-footer {
-    width: 100%;
-    box-sizing: border-box;
-    background-color: gray;
+    .contacto-footer-redes {
+        align-items: center;
+    }
 }
 

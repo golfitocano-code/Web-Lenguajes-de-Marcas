@@ -16,10 +16,15 @@
 </head>
 
 <body>
-    <cabecera class="cabecera">
-        <h1 id="nombre" style="color: goldenrod;">ARCAWEB</h1>
-        <img id="logo" src="../img/logo1.png" alt="logo" style="width: 10%;">
-    </cabecera>
+   <header class="cabecera">
+    <div class="cabecera-logo">
+        <img id="logo" src="../img/logo1.png" alt="Logo ARCAWEB">
+    </div>
+
+    <div class="cabecera-titulo">
+        <h1 id="nombre">ARCAWEB</h1>
+    </div>
+</header>
     <menu>
         <nav class="navegador">
        <button id="inicio" onclick="window.location.href='index.html'">Portada</button>
@@ -40,8 +45,8 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
+            background-color: goldenrod;
+            color:blanchedalmond;
         }
 
         /* Contenedor principal */
@@ -67,68 +72,106 @@
     <p class="descripcion">Descubre nuestros trabajos y sus precios.</p>
 
         <!-- TARJETAS DE OFERTAS -->
-        <section class="ofertas">
+        
+<!-- TARJETAS DE OFERTAS -->
+<section class="ofertas">
 
-            <!-- OFERTA 1 -->
-            <article class="tarjeta">
-                <img src="../img/disenoWeb.jpg"
-                     alt="Diseño de páginas web">
+    <!-- OFERTA 1: IMAGEN IZQUIERDA -->
+    <article class="tarjeta">
+        <img src="../img/disenoWeb.jpg"
+             alt="Diseño de páginas web">
 
-                <h3>Diseño web</h3>
+        <div class="contenido">
+            <h3>Diseño web</h3>
 
-                <p>«Tu página web es mucho más que tu tarjeta de presentación en internet; es el núcleo de toda tu estrategia de marketing digital.
-                    Diseñamos sitios web a medida, rápidos, adaptados a móviles y enfocados al 100% en la conversión y la experiencia de usuario.
-                    Unimos un diseño visualmente impactante con una arquitectura optimizada para SEO y rendimiento, 
-                    transformando cada clic en una oportunidad de venta para tu negocio.»</p>
+            <p>
+                Tu página web es mucho más que tu tarjeta de presentación en internet;
+                es el núcleo de toda tu estrategia de marketing digital.
+                Diseñamos sitios web a medida, rápidos, adaptados a móviles y enfocados
+                al 100% en la conversión y la experiencia de usuario.
+                Unimos un diseño visualmente impactante con una arquitectura optimizada
+                para SEO y rendimiento, transformando cada clic en una oportunidad
+                de venta para tu negocio.
+            </p>
 
-                <span class="precio">450 €</span>
-            </article>
+            <span class="precio">450 €</span>
+        </div>
+    </article>
 
-            <!-- OFERTA 2 -->
-            <article class="tarjeta">
-                <img src="../img/tiendaOnline.jpg"
-                     alt="Diseño de tienda online">
 
-                <h3>Tienda online</h3>
+    <!-- OFERTA 2: IMAGEN DERECHA -->
+    <article class="tarjeta">
+        <img src="../img/tiendaOnline.jpg"
+             alt="Diseño de tienda online">
 
-                <p>Diseñamos tiendas online atractivas, rápidas y optimizadas para convertir visitantes en clientes reales.
-                Unimos estética, experiencia de usuario (UX) y estrategia de marketing digital para que tu e-commerce no solo sea un escaparate visual,
-                 sino una máquina de ventas rentable desde el primer día.</p>
+        <div class="contenido">
+            <h3>Tienda online</h3>
 
-                <span class="precio">700 €</span>
-            </article>
+            <p>
+                Diseñamos tiendas online atractivas, rápidas y optimizadas para
+                convertir visitantes en clientes reales.
+                Unimos estética, experiencia de usuario (UX) y estrategia de marketing
+                digital para que tu e-commerce no solo sea un escaparate visual,
+                sino una máquina de ventas rentable desde el primer día.
+            </p>
 
-            <!-- OFERTA 3 -->
-            <article class="tarjeta">
-                <img src="../img/diseñoGrafico.jpg"
-                     alt="Diseño gráfico">
+            <span class="precio">700 €</span>
+        </div>
+    </article>
 
-                <h3>Diseño gráfico</h3>
 
-                <p>No solo diseñamos; construimos el ADN visual de tu negocio para que deje de competir y empiece a liderar.
-                Fusionamos estrategia de marca, creatividad y diseño digital para transformar la esencia de tu empresa en una identidad única, memorable e imposible de ignorar.
-                Desde un logotipo con propósito hasta piezas de alto impacto para tus redes sociales y campañas publicitarias,
-                creamos un universo visual coherente que conecta emocionalmente con tu audiencia, genera confianza ciega y multiplica el valor percibido de tu marca en cada pantalla.</p>
+    <!-- OFERTA 3: IMAGEN IZQUIERDA -->
+    <article class="tarjeta">
+        <img src="../img/diseñoGrafico.jpg"
+             alt="Diseño gráfico">
 
-                <span class="precio">150 €</span>
-            </article>
+        <div class="contenido">
+            <h3>Diseño gráfico</h3>
 
-            <!-- OFERTA 4 -->
-            <article class="tarjeta">
-                <img src="../img/mantenimiento.jpg"
-                     alt="Mantenimiento web">
+            <p>
+                No solo diseñamos; construimos el ADN visual de tu negocio para que
+                deje de competir y empiece a liderar.
+                Fusionamos estrategia de marca, creatividad y diseño digital para
+                transformar la esencia de tu empresa en una identidad única,
+                memorable e imposible de ignorar.
+                Desde un logotipo con propósito hasta piezas de alto impacto para
+                tus redes sociales y campañas publicitarias, creamos un universo
+                visual coherente que conecta emocionalmente con tu audiencia,
+                genera confianza y multiplica el valor percibido de tu marca
+                en cada pantalla.
+            </p>
 
-                <h3>Mantenimiento web</h3>
+            <span class="precio">150 €</span>
+        </div>
+    </article>
 
-                <p>Un gran diseño y una estrategia sólida pierden su valor si la plataforma falla.
-                Nuestro servicio de mantenimiento web protege tu inversión digital mediante actualizaciones supervisadas de seguridad,
-                plugins y el núcleo del sitio, copias de respaldo periódicas y optimización continua de la velocidad.
-                Nos encargamos de que tu web esté siempre rápida, segura y disponible, permitiéndote enfocar todos tus esfuerzos en hacer crecer tu negocio sin sorpresas técnicas.</p>
 
-                <span class="precio">80 €</span>
-            </article>
+    <!-- OFERTA 4: IMAGEN DERECHA -->
+    <article class="tarjeta">
+        <img src="../img/mantenimiento.jpg"
+             alt="Mantenimiento web">
 
-        </section>
+        <div class="contenido">
+            <h3>Mantenimiento web</h3>
+
+            <p>
+                Un gran diseño y una estrategia sólida pierden su valor si la
+                plataforma falla.
+                Nuestro servicio de mantenimiento web protege tu inversión digital
+                mediante actualizaciones supervisadas de seguridad, plugins y el
+                núcleo del sitio, copias de respaldo periódicas y optimización
+                continua de la velocidad.
+                Nos encargamos de que tu web esté siempre rápida, segura y disponible,
+                permitiéndote enfocar todos tus esfuerzos en hacer crecer tu negocio
+                sin sorpresas técnicas.
+            </p>
+
+            <span class="precio">80 €</span>
+        </div>
+    </article>
+
+</section>
+
 
     </main>
 
@@ -137,13 +180,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <footer class="contacto-footer">
+
     <div class="contacto-footer-contenido">
 
-        <!-- Contacto -->
-        <div>
+        <!-- BLOQUE 1: CONTACTO -->
+        <div class="footer-contacto">
             <h3>Contacto</h3>
 
             <div class="contacto-footer-info">
+
                 <div class="contacto-footer-dato">
                     <i class="fa-solid fa-phone"></i>
                     <a href="tel:+34900123456">900 123 456</a>
@@ -156,32 +201,39 @@
 
                 <div class="contacto-footer-dato">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span>Calle Ejemplo, 10, Ourense</span>
+                    <span>Avenida de Vigo, 30, Vigo</span>
                 </div>
 
                 <div class="contacto-footer-dato">
                     <i class="fa-solid fa-map-location-dot"></i>
                     <a href="https://maps.google.com/?q=Ourense,España"
-                       target="_blank" rel="noopener noreferrer">
+                       target="_blank"
+                       rel="noopener noreferrer">
                         Ver ubicación
                     </a>
                 </div>
-            </div>
 
-            <div class="contacto-footer-mapa">
-                <iframe
-                    src="https://maps.google.com/maps?q=Ourense%2C%20Espa%C3%B1a&output=embed"
-                    loading="lazy"
-                    title="Ubicación en Google Maps">
-                </iframe>
             </div>
         </div>
 
-        <!-- Redes sociales -->
-        <div>
+
+        <!-- BLOQUE 2: MAPA -->
+        <div class="contacto-footer-mapa">
+
+            <iframe
+                src="https://maps.google.com/maps?q=Ourense%2C%20Espa%C3%B1a&output=embed"
+                loading="lazy"
+                title="Ubicación en Google Maps">
+            </iframe>
+        </div>
+
+
+        <!-- BLOQUE 3: REDES SOCIALES -->
+        <div class="footer-redes">
             <h3>Síguenos</h3>
 
             <div class="contacto-footer-redes">
+
                 <a href="https://x.com/" target="_blank"
                    rel="noopener noreferrer">
                     <i class="fa-brands fa-x-twitter"></i>
@@ -199,13 +251,15 @@
                     <i class="fa-brands fa-instagram"></i>
                     <span>Instagram</span>
                 </a>
+
             </div>
         </div>
 
     </div>
+
 </footer>
 
-<!-- Copyright debajo de esta franja -->
+<!-- COPYRIGHT -->
 <div class="copyright">
     <p>&copy; 2026 ARCAWEB. Todos los derechos reservados.</p>
 </div>

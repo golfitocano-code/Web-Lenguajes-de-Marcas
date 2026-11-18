@@ -24,7 +24,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
+            background-color: goldenrod;
             color: #333;
         }
 
@@ -39,10 +39,15 @@
         }
     </style>
 
-    <cabecera class="cabecera">
-        <h1 id="nombre" style="color: goldenrod;">ARCAWEB</h1>
-        <img id="logo" src="../img/logo1.png" alt="logo" style="width: 10%;">
-    </cabecera>
+   <header class="cabecera">
+    <div class="cabecera-logo">
+        <img id="logo" src="../img/logo1.png" alt="Logo ARCAWEB">
+    </div>
+
+    <div class="cabecera-titulo">
+        <h1 id="nombre">ARCAWEB</h1>
+    </div>
+</header>
     <menu>
         <nav class="navegador">
        <button id="inicio" onclick="window.location.href='index.html'">Portada</button>
@@ -55,8 +60,8 @@
         </nav>
     </menu>
 
+<!-- Formulario -->
 
-/*FORMULARIO*/
 
 <section class="formulario-contacto">
 
@@ -130,13 +135,15 @@
 
 
 <footer class="contacto-footer">
+
     <div class="contacto-footer-contenido">
 
-        <!-- Contacto -->
-        <div>
+        <!-- BLOQUE 1: CONTACTO -->
+        <div class="footer-contacto">
             <h3>Contacto</h3>
 
             <div class="contacto-footer-info">
+
                 <div class="contacto-footer-dato">
                     <i class="fa-solid fa-phone"></i>
                     <a href="tel:+34900123456">900 123 456</a>
@@ -149,32 +156,39 @@
 
                 <div class="contacto-footer-dato">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span>Calle Ejemplo, 10, Ourense</span>
+                    <span>Avenida de Vigo, 30, Vigo</span>
                 </div>
 
                 <div class="contacto-footer-dato">
                     <i class="fa-solid fa-map-location-dot"></i>
                     <a href="https://maps.google.com/?q=Ourense,España"
-                       target="_blank" rel="noopener noreferrer">
+                       target="_blank"
+                       rel="noopener noreferrer">
                         Ver ubicación
                     </a>
                 </div>
-            </div>
 
-            <div class="contacto-footer-mapa">
-                <iframe
-                    src="https://maps.google.com/maps?q=Ourense%2C%20Espa%C3%B1a&output=embed"
-                    loading="lazy"
-                    title="Ubicación en Google Maps">
-                </iframe>
             </div>
         </div>
 
-        <!-- Redes sociales -->
-        <div>
+
+        <!-- BLOQUE 2: MAPA -->
+        <div class="contacto-footer-mapa">
+
+            <iframe
+                src="https://maps.google.com/maps?q=Ourense%2C%20Espa%C3%B1a&output=embed"
+                loading="lazy"
+                title="Ubicación en Google Maps">
+            </iframe>
+        </div>
+
+
+        <!-- BLOQUE 3: REDES SOCIALES -->
+        <div class="footer-redes">
             <h3>Síguenos</h3>
 
             <div class="contacto-footer-redes">
+
                 <a href="https://x.com/" target="_blank"
                    rel="noopener noreferrer">
                     <i class="fa-brands fa-x-twitter"></i>
@@ -192,13 +206,15 @@
                     <i class="fa-brands fa-instagram"></i>
                     <span>Instagram</span>
                 </a>
+
             </div>
         </div>
 
     </div>
+
 </footer>
 
-<!-- Copyright debajo de esta franja -->
+<!-- COPYRIGHT -->
 <div class="copyright">
     <p>&copy; 2026 ARCAWEB. Todos los derechos reservados.</p>
 </div>
